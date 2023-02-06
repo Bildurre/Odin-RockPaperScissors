@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./javascript.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Rock - Paper - Scissors</h1>
+    <h2>Such a Classic!</h2>
+  </header>
+  <main>
+    <section id="playScreen">
+      <div id="roundSelection">
+        <p>Select best of how many rouds you want to play</p>
+        <form id="roundRadio">
+          <div class="roundRadio">
+            <input type="radio" name="round" value="1" id="bo1">
+            <label for="bo1">1</label>
+          </div>
+          <div class="roundRadio">
+            <input type="radio" name="round" value="3" id="bo3">
+            <label for="bo1">3</label>
+          </div>
+          <div class="roundRadio">
+            <input type="radio" name="round" value="5" id="bo5">
+            <label for="bo1">5</label>
+          </div>
+          <div class="roundRadio">
+            <input type="radio" name="round" value="7" id="bo7">
+            <label for="bo1">7</label>
+          </div>
+        </form>
+        <button id="roundButton">Play!</button>
+      </div>
+
+      <div id="match">
+        <div id="weapons">
+          <div class="weapon">
+            <img src="./images/rock.png" alt="rock" id="0">
+          </div>
+          <div class="weapon">
+            <img src="./images/paper.png" alt="paper" id="1">
+          </div>
+          <div class="weapon">
+            <img src="./images/scissors.png" alt="scissors" id="2">
+          </div>
+        </div>
+        <div id="roundResult">
+          <p id="roundWinner"></p>
+          <p id="roundScores">Human <span id="humanScore"></span> - <span id="computerScore"></span> Computer</p>
+        </div>
+        <div id="choices">
+          <div id="humanChoice">
+            <p>Last human choice</p>
+            <div id="lastHumanChoice">
+              <img id="lastHumanImg">
+            </div>
+          </div>
+          <div id="computerChoice">
+            <p>Last computer choice</p>
+            <div id="lastComputerChoice">
+              <img id="lastComputerImg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <aside>
+      <h2>Score</h2>
+    </aside>
+  </main>
+  <footer>
+    Page Created by Egoi Astiz Urabayen
+  </footer>
+</body>
+</html>

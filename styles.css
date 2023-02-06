@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+header {
+  flex: 1 1 10vh;
+}
+
+main {
+  flex: 1 1 85vh;
+  display: flex;
+}
+
+#playScreen {
+  flex: 1 1 85vw;
+}
+
+#roundRadio {
+  display: flex;
+}
+
+.roundRadio {
+  display: flex;
+  flex-direction: column;
+}
+
+#roundSelection {
+  display: flex;
+  flex-direction: column;
+}
+
+#match {
+  display: flex;
+  flex-direction: column;
+}
+
+#weapons {
+  display: flex;
+}
+.weapon,
+#lastHumanChoice,
+#lastComputerChoice {
+  flex: 0 1 auto;
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+  aspect-ratio: 1/1;
+}
+
+.weapon > img,
+#lastHumanImg,
+#lastComputerImg {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  min-width: 0;
+  border-radius: 50%;
+}
+
+#choices {
+  display: flex;
+}
+aside {
+  flex: 1 1 15vw;
+}
+
+footer {
+  flex: 1 1 5vh;
+}
