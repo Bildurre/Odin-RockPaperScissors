@@ -1,51 +1,75 @@
 * {
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
+  background-color: rgb(24, 23, 23);
+  color: rgb(40, 241, 0);
+  font-family:'Courier New', Courier, monospace;
 }
 
 header {
+  padding-top: 3vh;
   flex: 1 1 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header > h1 {
+  font-size: 200%;
+}
+header > h2 {
+  font-size: 150%;
+  margin-top: 1vh;
 }
 
 main {
-  flex: 1 1 85vh;
+  flex: 1 1 80vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#playScreen {
-  flex: 1 1 85vw;
-}
-
-#roundRadio {
+.roundRadioForm {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
 }
 
 .roundRadio {
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundRadio > input {
+  border: 2px solid rgb(40, 241, 0);
+}
+
+.roundSelection {
   display: flex;
   flex-direction: column;
 }
 
-#roundSelection {
+.matchScreen {
   display: flex;
   flex-direction: column;
 }
 
-#match {
-  display: flex;
-  flex-direction: column;
-}
-
-#weapons {
+.weapons {
   display: flex;
 }
 .weapon,
-#lastHumanChoice,
-#lastComputerChoice {
+.lastHumanChoice,
+.lastComputerChoice {
   flex: 0 1 auto;
   border-radius: 50%;
   max-width: 150px;
@@ -54,8 +78,8 @@ main {
 }
 
 .weapon > img,
-#lastHumanImg,
-#lastComputerImg {
+.lastHumanImg,
+.lastComputerImg {
   max-height: 100%;
   max-width: 100%;
   min-height: 0;
@@ -63,7 +87,7 @@ main {
   border-radius: 50%;
 }
 
-#choices {
+.choices {
   display: flex;
 }
 aside {
@@ -72,4 +96,9 @@ aside {
 
 footer {
   flex: 1 1 5vh;
+}
+
+
+.hidden {
+  display: none;
 }
