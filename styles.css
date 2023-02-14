@@ -49,14 +49,22 @@ main {
   justify-content: center;
   align-items: center;
 }
+input[type='radio'] {
+  accent-color: rgb(40, 241, 0);
+}
 
 .roundRadio > input {
   border: 2px solid rgb(40, 241, 0);
 }
 
+.roundRadio > input:hover {
+  cursor: pointer;
+}
+
 .roundSelection {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .matchScreen {
@@ -64,9 +72,19 @@ main {
   flex-direction: column;
 }
 
+.weaponChoice {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .weapons {
   display: flex;
+  gap: 10px;
 }
+
+
 .weapon,
 .lastHumanChoice,
 .lastComputerChoice {
@@ -76,6 +94,16 @@ main {
   max-height: 150px;
   aspect-ratio: 1/1;
 }
+.lastHumanChoice,
+.lastComputerChoice {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.weapon:hover {
+  cursor: pointer;
+}
+
 
 .weapon > img,
 .lastHumanImg,
@@ -88,13 +116,55 @@ main {
 }
 
 .choices {
+  margin-top: 25px;
   display: flex;
-}
-aside {
-  flex: 1 1 15vw;
+  gap: 20px;
+  font-size: 80%;
+  color:rgb(146, 247, 126)
 }
 
+.roundResult {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.roundWinner {
+  font-size: 120%;;
+}
+
+.matchEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.matchEndWinner {
+  font-size: 200%;
+}
+
+.roundButton, .playAgain {
+  border: 3px solid rgb(26, 145, 2);
+  background-color: rgb(222, 243, 218);
+  color: rgb(146, 247, 126);
+  border-radius: 10px;
+  height: 70px;
+  width: 200px;
+  font-size: 150%;
+  font-weight: 1000;
+  -webkit-text-stroke: 1px rgb(21, 109, 3);
+}
+.roundButton:hover,
+ .playAgain:hover {
+  cursor: pointer;
+}
 footer {
+  font-size: 75%;
   flex: 1 1 5vh;
 }
 

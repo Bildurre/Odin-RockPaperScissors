@@ -48,7 +48,10 @@ function playRound(humanChoice) {
   if (resultMod < 0) {
     resultMod = resultMod + 3;
   };
-  
+  if (matchScore.round == 1) {
+    document.querySelector(".choices").classList.toggle("hidden");
+    document.querySelector(".roundResult").classList.toggle("hidden");
+  }
   switch (resultMod) {
     case 0:
         document.querySelector(".roundWinner").textContent = 'Round ' + matchScore.round + ': It\'s a draw!';
@@ -82,9 +85,9 @@ function playRound(humanChoice) {
 
   if (gameEnd(roundValue,matchScore.human, matchScore.computer )){
     document.querySelector(".weapons").classList.toggle("hidden");
-    document.querySelector(".choices").classList.toggle("hidden");
     document.querySelector(".roundResult").classList.toggle("hidden");
     document.querySelector(".matchEnd").classList.toggle("hidden");
+    document.querySelector(".choiceText").classList.toggle("hidden");
     if (matchScore.human > matchScore.computer) {
       document.querySelector(".matchEndWinner").textContent = "Human Wins!";
     } else {
